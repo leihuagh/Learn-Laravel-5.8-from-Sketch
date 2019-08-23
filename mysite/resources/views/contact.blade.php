@@ -1,1 +1,7 @@
-<h1>Contact Us</h1>
+@extends('layout')
+
+@section('head_title', 'Contact Us')
+
+@section('main_contents')
+<h2>Contact Us</h2>
+@endsection
