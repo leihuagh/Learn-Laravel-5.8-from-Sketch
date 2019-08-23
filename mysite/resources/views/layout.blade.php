@@ -14,7 +14,7 @@
 
 <body>
 
-    <h1>Base</h1>
+    @include('base.nav')
 
     @yield('main_contents', 'Base')
 
