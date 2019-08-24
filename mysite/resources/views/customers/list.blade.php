@@ -15,6 +15,7 @@
             <form action="customers" method="POST">
                 <div class="pb-3">
                     <input type="text" name="name" value="{{ old('name') }}">
+                    <div>{{ $errors->first('name') }}</div>
                 </div>
                 @csrf
                 <button type="submit" class="btn btn-primary">Add Customer</button>
