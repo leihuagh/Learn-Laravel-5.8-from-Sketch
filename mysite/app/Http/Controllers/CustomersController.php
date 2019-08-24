@@ -10,10 +10,10 @@ class CustomersController extends Controller
     public function list()
     {
         $customers = Customer::all();
+        $activeCustomers = Customer::where('status', 1)->get();
+        $inactiveCustomers = Customer::where('status', 0)->get();
 
-        return view('customers.list', [
-            'customers' => $customers,
-        ]);
+        return view('customers.list', compact('activeCustomers', 'inactiveCustomers'));
     }
 
     public function store()

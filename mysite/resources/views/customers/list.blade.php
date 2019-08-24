@@ -43,9 +43,16 @@
     </div>
 
     <div class="row">
-        <div class="col-12">
+        <div class="col-4 offset-1">
             <ul>
-                @foreach ($customers as $customer)
+                @foreach ($activeCustomers as $customer)
+                <li>{{ $customer->name }} (<span class="text-muted">{{ $customer->email }}</span>)</li>
+                @endforeach
+            </ul>
+        </div>
+        <div class="col-4 offset-1">
+            <ul>
+                @foreach ($inactiveCustomers as $customer)
                 <li>{{ $customer->name }} (<span class="text-muted">{{ $customer->email }}</span>)</li>
                 @endforeach
             </ul>
